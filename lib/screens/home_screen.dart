@@ -11,12 +11,13 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(
+              onPressed: () async {
+                final res = await Navigator.pushNamed(
                   context,
                   "resumeScreen",
                   arguments: {"nameOfUser": "Vishal Kumar"},
                 );
+                print(res);
               },
               child: Text("View Resume"),
             ),

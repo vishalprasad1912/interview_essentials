@@ -174,7 +174,7 @@ class ResumeScreen extends StatelessWidget {
           Divider(),
           Container(
             child: Padding(
-              padding: const EdgeInsets.all(12.0),
+              padding: const EdgeInsets.all(4.0),
               child: Column(
                 children: [
                   Row(
@@ -198,12 +198,22 @@ class ResumeScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Text("Go Back"),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context, "Pass");
+                },
+                child: Text("Pass"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context, "Fail");
+                },
+                child: Text("Fail"),
+              ),
+            ],
           ),
         ],
       ),
