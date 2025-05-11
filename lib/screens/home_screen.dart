@@ -13,10 +13,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ResumeScreen()),
-                );
+                Navigator.pushNamed(context, "resumeScreen");
               },
               child: Text("View Resume"),
             ),
