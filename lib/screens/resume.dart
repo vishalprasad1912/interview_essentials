@@ -6,6 +6,7 @@ class ResumeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)!.settings.arguments;
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -30,7 +31,7 @@ class ResumeScreen extends StatelessWidget {
                           radius: 48,
                         ),
                         SizedBox(height: 16),
-                        Text("Vishal Kumar", style: TextStyle(fontSize: 20)),
+                        Text(args.toString(), style: TextStyle(fontSize: 20)),
                         Text(
                           "Flutter Developer",
                           style: TextStyle(

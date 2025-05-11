@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:interview_essentials/screens/resume.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,7 +12,11 @@ class HomeScreen extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, "resumeScreen");
+                Navigator.pushNamed(
+                  context,
+                  "resumeScreen",
+                  arguments: {"nameOfUser": "Vishal Kumar"},
+                );
               },
               child: Text("View Resume"),
             ),
